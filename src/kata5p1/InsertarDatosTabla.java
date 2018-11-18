@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class InsertarDatosTabla {
     
     public static void insert(String email){
-        String url = "jdbc:sqlite:Kata5.db";
+        String url = "jdbc:sqlite:Kata5BD.db";
         String sql = "INSERT INTO email (direccion) VALUES(?)";
         try (Connection conn = DriverManager.getConnection(url);
                 PreparedStatement pstmt = conn.prepareStatement(sql)){
